@@ -66,6 +66,7 @@ jobs:
       with: 
         repository: 'epiforecasts/covid19-forecast-hub-europe'
         ref: 'sophiemeakin'
+        token: ${{ secrets.API_TOKEN_GITHUB }}
     
     - uses: actions/download-artifact@v2
       with:
@@ -74,7 +75,6 @@ jobs:
         
     - name: Commit and push
       env:
-        AUTH: ${{ secrets.GITHUBTOKEN }}
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - Visualisation Update"
