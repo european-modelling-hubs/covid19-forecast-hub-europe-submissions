@@ -21,8 +21,8 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       install.packages(c("tidyverse", "rmetalog", "EpiNow2", "here", "data.table", "remotes"))
-       remotes::install_github("sophiemeakin/technocolour")
+       install.packages(c("tidyverse", "rmetalog", "EpiNow2", "here", "data.table", "devtools"))
+       devtools::install_github("sophiemeakin/technocolour")
       shell: Rscript {0}
 
     - name: Generate forecasts
