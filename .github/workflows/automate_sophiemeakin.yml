@@ -74,7 +74,6 @@ jobs:
         path: data-processed
         
     - name: Commit and push
-      env:
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - Visualisation Update"
