@@ -27,8 +27,8 @@ jobs:
 
     - name: Generate forecasts
       run: |
-        here::i_am("models/sophiemeakin")
-        source('models/sophiemeakin/R/00_update_forecast.R')
+        setwd("models/sophiemeakin")
+        source("R/00_update_forecast.R")
       shell: Rscript {0}
       
     - uses: actions/upload-artifact@v2
