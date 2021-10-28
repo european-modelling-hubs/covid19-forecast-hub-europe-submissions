@@ -21,7 +21,7 @@ jobs:
 
     - name: Install R dependencies
       run: |
-       install.packages(c("tidyverse", "metalog", "EpiNow2", "here", "data.table"))
+       install.packages(c("tidyverse", "metalog", "EpiNow2", "here", "data.table", "remotes"))
        remotes::install_github("sophiemeakin/techocolour")
       shell: Rscript {0}
 
