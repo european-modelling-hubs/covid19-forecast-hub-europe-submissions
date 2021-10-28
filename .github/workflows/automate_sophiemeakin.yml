@@ -51,6 +51,7 @@ jobs:
       run: |
         install.packages("remotes")
         remotes::install_github("epiforecasts/covid19-forecast-hub-europe-submissions")
+      shell: Rscript {0}
       
     - name: Create new branch
       run: |
@@ -59,6 +60,7 @@ jobs:
           gh_user = "epiforecasts",
           gh_repo = "covid19-forecast-hub-europe"
         )
+      shell: Rscript {0}
     
     - uses: actions/checkout@v2
       with: 
