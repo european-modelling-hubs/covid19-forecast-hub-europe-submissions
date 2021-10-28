@@ -1,8 +1,6 @@
 name: "Automation"
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 2 * * 1"
 
 jobs:
   generate-forecasts:
