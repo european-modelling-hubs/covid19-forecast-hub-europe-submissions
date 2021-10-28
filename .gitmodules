@@ -1,0 +1,4 @@
+[submodule "models/sophiemeakin"]
+	path = models/sophiemeakin
+	url = git@github.com:sophiemeakin/ecdc-covid19-admissions.git
+	ignore = all

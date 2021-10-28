@@ -1,0 +1,83 @@
+name: "Automation"
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 2 * * 1"
+
+jobs:
+  generate-forecasts:
+    runs-on: ubuntu-20.04
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        submodules: true
+    
+    - uses: r-lib/actions/setup-r@v1
+      with:
+        use-public-rspm: true
+
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev
+
+    - name: Install R dependencies
+      run: |
+       install.packages(c("tidyverse", "metalog", "EpiNow2", "here", "data.table"))
+       remotes::install_github("sophiemeakin/techocolour")
+      shell: Rscript {0}
+
+    - name: Generate forecasts
+      run: Rscript 'models/sophiemeakin/R/00_update/forecasts.R'
+      
+    - uses: actions/upload-artifact@v2
+      with:
+        name: sophiemeakin
+        retention-days: 5
+        path: models/sophiemeakin/data/latest-forecasts
+
+  upload-forecasts:
+    runs-on: ubuntu-20.04
+    env:
+      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - uses: r-lib/actions/setup-r@v1
+      with:
+        use-public-rspm: true
+
+    - name: Install system libraries
+      run: |
+        sudo apt-get install libcurl4-openssl-dev
+  
+    - name: Install helper R package
+      run: |
+        install.packages("remotes")
+        remotes::install_github("epiforecasts/covid19-forecast-hub-europe-submissions")
+      
+    - name: Create new branch
+      run: |
+        ForecastHubAutosubmissions::create_github_branch(
+          name = "sophiemeakin",
+          gh_user = "epiforecasts",
+          gh_repo = "covid19-forecast-hub-europe"
+        )
+    
+    - uses: actions/checkout@v2
+      with: 
+        repository: 'epiforecasts/covid19-forecast-hub-europe'
+        ref: 'sophiemeakin'
+    
+    - uses: actions/download-artifact@v2
+      with:
+        name: sophiemeakin
+        path: data-processed
+        
+    - name: Commit and push
+      env:
+        AUTH: ${{ secrets.GITHUBTOKEN }}
+      run: |
+        git config user.email "action@github.com"
+        git config user.name "GitHub Action - Visualisation Update"
+        git commit -am "Sophie Meakin's automated submission"
+        git push
+        echo "pushed to github"
