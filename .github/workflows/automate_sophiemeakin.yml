@@ -23,6 +23,7 @@ jobs:
       run: |
        install.packages(c("tidyverse", "rmetalog", "EpiNow2", "here", "data.table", "devtools"))
        devtools::install_github("sophiemeakin/technocolour")
+       devtools::install_github("epiforecasts/EpiSoon")
       shell: Rscript {0}
 
     - name: Generate forecasts
