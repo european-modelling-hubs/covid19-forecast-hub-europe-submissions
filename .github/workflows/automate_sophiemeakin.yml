@@ -61,7 +61,7 @@ jobs:
     - name: Create new branch
       run: |
         ForecastHubAutosubmissions::create_github_branch(
-          name = "sophiemeakin",
+          new_branch = "sophiemeakin",
           gh_user = "epiforecasts",
           gh_repo = "covid19-forecast-hub-europe"
         )
