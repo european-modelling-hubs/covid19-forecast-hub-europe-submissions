@@ -41,8 +41,7 @@ jobs:
   upload-forecasts:
     needs: generate-forecasts
     runs-on: ubuntu-20.04
-    env:
-      GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
     - uses: r-lib/actions/setup-r@v1
       with:
@@ -53,12 +52,16 @@ jobs:
         sudo apt-get install libcurl4-openssl-dev
   
     - name: Install helper R package
+      env:
+        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
       run: |
         install.packages("remotes")
         remotes::install_github("epiforecasts/covid19-forecast-hub-europe-submissions")
       shell: Rscript {0}
       
     - name: Create new branch
+      env: 
+        GITHUB_PAT: ${{ secrets.API_TOKEN_GITHUB }}
       run: |
         ForecastHubAutosubmissions::create_github_branch(
           new_branch = "sophiemeakin",
