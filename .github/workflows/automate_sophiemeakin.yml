@@ -99,6 +99,8 @@ jobs:
         echo "pushed to github"
         
     - name: Open pull request
+      env: 
+        GITHUB_PAT: ${{ secrets.API_TOKEN_GITHUB }}
       run: |
         gh::gh(
           "POST /repos/{owner}/{repo}/pulls", 
