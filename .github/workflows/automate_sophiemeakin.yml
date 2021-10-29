@@ -85,6 +85,7 @@ jobs:
       run: |
         git config user.email "action@github.com"
         git config user.name "GitHub Action - Visualisation Update"
-        git commit -am "Sophie Meakin's automated submission"
+        git add --all
+        git commit -m "Sophie Meakin's automated submission"
         git push
         echo "pushed to github"
