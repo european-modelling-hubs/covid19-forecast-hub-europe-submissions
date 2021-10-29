@@ -89,3 +89,15 @@ jobs:
         git commit -m "Sophie Meakin's automated submission"
         git push
         echo "pushed to github"
+        
+    - name: Open pull request
+      run: |
+        gh::gh(
+          "POST /repos/{owner}/{repo}/pulls", 
+          owner = "epiforecasts",
+          repo = "covid19-forecast-hub-europe",
+          title = "Sophie Meakin's automated submission",
+          head = "sophiemeakin",
+          base = "main"
+        )
+      shell: Rscript {0}
