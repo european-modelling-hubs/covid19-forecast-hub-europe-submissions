@@ -13,8 +13,8 @@
 create_github_branch <- function(new_branch, sha, gh_user, gh_repo) {
   
   if (missing(sha)) {
-    message("Branching from the HEAD of the default branch")
     sha <- get_default_head(gh_user, gh_repo)
+    message("Branching from the HEAD of the default branch (", sha, ")")
   }
   
   gh::gh(
