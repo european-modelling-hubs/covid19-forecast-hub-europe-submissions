@@ -38,3 +38,8 @@ providing:
 -   the week day and time at which the workflow should run (as UTC).
 -   the name of the GitHub user who should be tagged on pull request to
     review automated submissions.
+
+Please note that although encouraged, it is not strictly mandatory to
+submit the code generating your forecasts. You can submit a script
+fetching already existing forecasts from another location such as an
+API, another GitHub repository, a data repository, etc.
