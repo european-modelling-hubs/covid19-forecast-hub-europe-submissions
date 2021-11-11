@@ -20,7 +20,8 @@ repository as a pull request.
 
 ## Guidelines for submitting your model
 
-To submit your model for auto-submission, you need to open an issue
+To submit your model for auto-submission, you need to [open an
+issue](https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions/issues/new?template=new-model.md)
 providing:
 
 -   The URL to a public git repository (e.g., hosted on GitHub)
@@ -34,4 +35,6 @@ providing:
         (with renv). **All dependencies must have an exact version
         pinned to minimise risk of breakage with future dependency
         updates.**
--   the week day and time at which the workflow should run (as UTC)
+-   the week day and time at which the workflow should run (as UTC).
+-   the name of the GitHub user who should be tagged on pull request to
+    review automated submissions.
