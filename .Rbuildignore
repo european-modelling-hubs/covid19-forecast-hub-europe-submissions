@@ -2,3 +2,4 @@
 ^\.Rproj\.user$
 ^models$
 ^\.github$
+^README\.Rmd$
