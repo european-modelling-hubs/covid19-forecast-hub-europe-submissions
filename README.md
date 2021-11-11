@@ -31,7 +31,7 @@ providing:
     -   a dependency management file. The exact name and syntax depend
         on the programming language you are using. Some examples are
         `requirements.txt` for python (with pip) or `renv.lock` for R
-        (with renv). **All dependencies need to have an exact version
+        (with renv). **All dependencies must have an exact version
         pinned to minimise risk of breakage with future dependency
         updates.**
 -   the week day and time at which the workflow should run (as UTC)
