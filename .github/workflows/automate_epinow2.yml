@@ -30,7 +30,7 @@ jobs:
       run: |
         library(glue)
         library(data.table)
-        dir.create("models/epinow2")
+        dir.create("models/epinow2", recursive = TRUE)
         date <- Sys.Date()
         url <- glue("https://raw.githubusercontent.com/epiforecasts/europe-covid-forecast/master/submissions/rt-forecasts/{date}/{date}-epiforecasts-EpiNow2.csv")
         forecast <- fread(url)
