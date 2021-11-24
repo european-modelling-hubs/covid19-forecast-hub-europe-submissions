@@ -34,7 +34,7 @@ jobs:
         date <- Sys.Date()
         url <- glue("https://raw.githubusercontent.com/epiforecasts/europe-covid-forecast/master/submissions/rt-forecasts/{date}/{date}-epiforecasts-EpiNow2.csv")
         forecast <- fread(url)
-        fwrite(glue("models/epinow2/{date}-epiforecasts-EpiNow2.csv"))
+        fwrite(forecast, glue("models/epinow2/{date}-epiforecasts-EpiNow2.csv"))
       shell: Rscript {0}
       
     - uses: actions/upload-artifact@v2
