@@ -12,13 +12,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        submodules: true
-
-    - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev
+        submodules: false
 
     - name: Generate forecasts
-      run: data-submission/epinow2/main.sh
+      run: data-submissions/epinow2/main.sh
       shell: bash
       
     - uses: actions/upload-artifact@v2
