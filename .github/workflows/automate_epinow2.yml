@@ -25,7 +25,7 @@ jobs:
       with:
         name: epinow2
         retention-days: 5
-        path: data-submission/epinow2
+        path: data-submissions/epinow2
 
   upload-forecasts:
     needs: generate-forecasts
