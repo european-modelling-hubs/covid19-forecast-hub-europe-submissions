@@ -19,12 +19,7 @@ jobs:
         use-public-rspm: true
 
     - name: Install system dependencies
-      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev libv8-dev
-
-    - name: Install R dependencies
-      run: |
-       install.packages(c("fread", "glue"))
-      shell: Rscript {0}
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev
 
     - name: Generate forecasts
       run: data-submission/epinow2/main.sh
