@@ -24,7 +24,7 @@ jobs:
       with:
         name: ${{ env.GITHUB_WORKFLOW }}
         retention-days: 5
-        path: models/${{ env.GITHUB_WORKFLOW }}/data-processed/*
+        path: models/${{ env.GITHUB_WORKFLOW }}/data-processed/**
 
   upload-forecasts:
     needs: generate-forecasts
