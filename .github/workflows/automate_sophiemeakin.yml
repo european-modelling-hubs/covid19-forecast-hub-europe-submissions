@@ -44,9 +44,9 @@ jobs:
       
     - uses: actions/upload-artifact@v2
       with:
-        name: ${{ GITHUB_WORKFLOW }}
+        name: ${{ github.workflow }}
         retention-days: 5
-        path: models/${{ GITHUB_WORKFLOW }}/data/latest-forecasts
+        path: models/${{ github.workflow }}/data/latest-forecasts
 
   upload-forecasts:
     needs: generate-forecasts
@@ -59,16 +59,16 @@ jobs:
     
     - uses: actions/download-artifact@v2
       with:
-        name: ${{ GITHUB_WORKFLOW }}
+        name: ${{ github.workflow }}
         path: data-processed
         
     - uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.EPIFORECASTS_TOKEN }}
-        commit-message: ${{ GITHUB_WORKFLOW }}'s automated submission
+        commit-message: ${{ github.workflow }}'s automated submission
         committer: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
         author: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
-        branch: ${{ GITHUB_WORKFLOW }}
-        title: ${{ GITHUB_WORKFLOW }}'s automated submission
+        branch: ${{ github.workflow }}
+        title: ${{ github.workflow }}'s automated submission
         body: Automated submission via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
         delete-branch: true
