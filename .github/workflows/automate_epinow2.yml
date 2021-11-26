@@ -17,7 +17,7 @@ jobs:
 
     - name: Generate forecasts
       run: |
-        cd models/epinow2
+        cd models/${{ env.GITHUB_WORKFLOW }}
         bash main.sh
       
     - uses: actions/upload-artifact@v2
