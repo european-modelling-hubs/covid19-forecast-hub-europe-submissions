@@ -16,8 +16,9 @@ jobs:
         lfs: true
 
     - name: Generate forecasts
-      run: models/epinow2/main.sh
-      shell: bash
+      run: |
+        cd models/$GITHUB_WORKFLOW
+        bash main.sh
       
     - uses: actions/upload-artifact@v2
       with:
