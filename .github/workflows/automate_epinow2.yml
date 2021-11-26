@@ -39,27 +39,13 @@ jobs:
         name: epinow2
         path: data-processed/epiforecasts-EpiNow2
         
-    - name: Commit and push
-      run: |
-        git config user.email "epiforecasts-bot@users.noreply.github.com"
-        git config user.name "Epiforecasts Bot"
-        git checkout -b epinow2
-        git add --all
-        git commit -m "EpiNow2 automated submission"
-        git push
-        echo "pushed to github"
-        
-    - name: Open pull request
-      env: 
-        GITHUB_PAT: ${{ secrets.EPIFORECASTS_TOKEN }}
-      run: |
-        gh::gh(
-          "POST /repos/{owner}/{repo}/pulls", 
-          owner = "epiforecasts",
-          repo = "covid19-forecast-hub-europe",
-          title = "EpiNow2 automated submission",
-          head = "epinow2",
-          base = "main"
-        )
-      shell: Rscript {0}
-
+    - uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.EPIFORECASTS_TOKEN }}
+        commit-message: epinow2's automated submission
+        committer: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
+        author: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
+        branch: epinow2
+        title: epinow2's automated submission
+        body: Automated submission via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
+        delete-branch: true

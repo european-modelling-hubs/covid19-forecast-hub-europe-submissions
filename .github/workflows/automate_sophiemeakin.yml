@@ -61,27 +61,14 @@ jobs:
       with:
         name: sophiemeakin
         path: data-processed
-        
-    - name: Commit and push
-      run: |
-        git config user.email "epiforecasts-bot@users.noreply.github.com"
-        git config user.name "Epiforecasts Bot"
-        git checkout -b sophiemeakin
-        git add --all
-        git commit -m "Sophie Meakin's automated submission"
-        git push
-        echo "pushed to github"
-        
-    - name: Open pull request
-      env: 
-        GITHUB_PAT: ${{ secrets.EPIFORECASTS_TOKEN }}
-      run: |
-        gh::gh(
-          "POST /repos/{owner}/{repo}/pulls", 
-          owner = "epiforecasts",
-          repo = "covid19-forecast-hub-europe",
-          title = "Sophie Meakin's automated submission",
-          head = "sophiemeakin",
-          base = "main"
-        )
-      shell: Rscript {0}
+
+    - uses: peter-evans/create-pull-request@v3
+      with:
+        token: ${{ secrets.EPIFORECASTS_TOKEN }}
+        commit-message: Sophie Meakin's automated submission
+        committer: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
+        author: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
+        branch: sophiemeakin
+        title: Sophie Meakin's automated submission
+        body: Automated submission via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
+        delete-branch: true
