@@ -19,6 +19,8 @@ jobs:
       env: 
         MODEL: ${{ env.GITHUB_WORKFLOW }}
       run: |
+        echo $GITHUB_WORKFLOW
+        echo $MODEL
         cd models/$MODEL
         bash main.sh
       
