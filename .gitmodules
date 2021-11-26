@@ -1,4 +1,4 @@
-[submodule "model-submissions/sophiemeakin"]
-	path = model-submissions/sophiemeakin
+[submodule "models/sophiemeakin"]
+	path = models/sophiemeakin
 	url = git@github.com:sophiemeakin/ecdc-covid19-admissions.git
 	ignore = dirty

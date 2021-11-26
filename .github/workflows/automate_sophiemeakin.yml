@@ -30,7 +30,7 @@ jobs:
 
     - name: Generate forecasts
       run: |
-        setwd("model-submissions/sophiemeakin")
+        setwd("models/sophiemeakin")
         source("R/00_update_forecast.R")
         for (f in list.files("data/latest-forecasts")) {
           model_name <- gsub("^\\d{4}-\\d{2}-\\d{2}-(\\w+\\-\\w+)\\.csv$", "\\1", f)
