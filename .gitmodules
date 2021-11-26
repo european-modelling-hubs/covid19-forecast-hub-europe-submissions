@@ -2,3 +2,8 @@
 	path = models/sophiemeakin
 	url = git@github.com:sophiemeakin/ecdc-covid19-admissions.git
 	ignore = dirty
+[submodule "models/epinow2"]
+	path = models/epinow2
+	url = git@github.com:epiforecasts/europe-covid-forecast.git
+	branch = auto-submissions
+	ignore = dirty
