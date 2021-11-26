@@ -1,4 +1,4 @@
-name: "Automation"
+name: "epinow2"
 on:
   workflow_dispatch:
   schedule:
@@ -20,9 +20,9 @@ jobs:
       
     - uses: actions/upload-artifact@v2
       with:
-        name: epinow2
+        name: ${{ env.GITHUB_WORKFLOW }}
         retention-days: 5
-        path: data-submissions/epinow2
+        path: models/${{ env.GITHUB_WORKFLOW }}/data-processed/*
 
   upload-forecasts:
     needs: generate-forecasts
@@ -36,16 +36,16 @@ jobs:
     
     - uses: actions/download-artifact@v2
       with:
-        name: epinow2
-        path: data-processed/epiforecasts-EpiNow2
+        name: ${{ env.GITHUB_WORKFLOW }}
+        path: data-processed
         
     - uses: peter-evans/create-pull-request@v3
       with:
         token: ${{ secrets.EPIFORECASTS_TOKEN }}
-        commit-message: epinow2's automated submission
+        commit-message: ${{ env.GITHUB_WORKFLOW }}'s automated submission
         committer: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
         author: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
-        branch: epinow2
-        title: epinow2's automated submission
+        branch: ${{ env.GITHUB_WORKFLOW }}
+        title: ${{ env.GITHUB_WORKFLOW }}'s automated submission
         body: Automated submission via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
         delete-branch: true
