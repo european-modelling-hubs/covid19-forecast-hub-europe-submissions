@@ -12,8 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with:
-        submodules: false
-        lfs: true
+        submodules: true
 
     - name: Generate forecasts
       run: |
