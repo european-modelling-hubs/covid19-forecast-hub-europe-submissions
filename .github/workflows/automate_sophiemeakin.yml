@@ -51,39 +51,10 @@ jobs:
   upload-forecasts:
     needs: generate-forecasts
     runs-on: ubuntu-20.04
-
     steps:
-    - uses: r-lib/actions/setup-r@v1
-      with:
-        use-public-rspm: true
-
-    - name: Install system libraries
-      run: |
-        sudo apt-get install libcurl4-openssl-dev
-  
-    - name: Install helper R package
-      env:
-        GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        install.packages("remotes")
-        remotes::install_github("epiforecasts/covid19-forecast-hub-europe-submissions")
-      shell: Rscript {0}
-      
-    - name: Create new branch
-      env: 
-        GITHUB_PAT: ${{ secrets.EPIFORECASTS_TOKEN }}
-      run: |
-        ForecastHubAutosubmissions::create_github_branch(
-          new_branch = "sophiemeakin",
-          gh_user = "epiforecasts",
-          gh_repo = "covid19-forecast-hub-europe"
-        )
-      shell: Rscript {0}
-    
     - uses: actions/checkout@v2
       with: 
         repository: 'epiforecasts/covid19-forecast-hub-europe'
-        ref: 'sophiemeakin'
         token: ${{ secrets.EPIFORECASTS_TOKEN }}
     
     - uses: actions/download-artifact@v2
@@ -93,8 +64,9 @@ jobs:
         
     - name: Commit and push
       run: |
-        git config user.email "action@github.com"
-        git config user.name "GitHub Action - Visualisation Update"
+        git config user.email "epiforecasts-bot@users.noreply.github.com"
+        git config user.name "Epiforecasts Bot"
+        git checkout -b sophiemeakin
         git add --all
         git commit -m "Sophie Meakin's automated submission"
         git push
