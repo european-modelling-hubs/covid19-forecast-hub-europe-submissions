@@ -1,12 +1,4 @@
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 # Forecast Hub Autosubmission Framework
-
-<!-- badges: start -->
-
-[![R-CMD-check](https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions/workflows/R-CMD-check/badge.svg)](https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions/actions)
-<!-- badges: end -->
 
 This repo contains the necessary infrastructure to handle automatic
 submissions to a Forecast Hub (in this specific case, the [European
