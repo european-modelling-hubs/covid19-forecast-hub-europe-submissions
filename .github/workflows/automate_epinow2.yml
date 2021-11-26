@@ -15,7 +15,7 @@ jobs:
         submodules: false
 
     - name: Generate forecasts
-      run: data-submissions/epinow2/main.sh
+      run: models/epinow2/main.sh
       shell: bash
       
     - uses: actions/upload-artifact@v2
