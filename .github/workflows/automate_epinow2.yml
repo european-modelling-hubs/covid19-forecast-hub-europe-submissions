@@ -16,8 +16,10 @@ jobs:
         lfs: true
 
     - name: Generate forecasts
+      env: 
+        MODEL: ${{ env.GITHUB_WORKFLOW }}
       run: |
-        cd models/$GITHUB_WORKFLOW
+        cd models/$MODEL
         bash main.sh
       
     - uses: actions/upload-artifact@v2
