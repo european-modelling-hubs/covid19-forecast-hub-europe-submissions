@@ -41,6 +41,7 @@ jobs:
         path: data-processed
         
     - uses: peter-evans/create-pull-request@67df31e08a133c6a77008b89689677067fef169e
+      id: cpr
       with:
         token: ${{ secrets.EPIFORECASTS_TOKEN }}
         commit-message: ${{ github.workflow }}'s automated submission
@@ -50,3 +51,8 @@ jobs:
         title: ${{ github.workflow }}'s automated submission
         body: Automated submission via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
         delete-branch: true
+
+    - name: Check outputs
+      run: |
+        echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
+        echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
