@@ -18,7 +18,7 @@ providing:
 
 -   The URL to a public git repository (e.g., hosted on GitHub)
     containing:
-    -   a file `main.R` or `main.py` **at its root**. This `main` file
+    -   a file `main.sh`, `main.R` or `main.py` **at its root**. This `main` file
         needs to create the forecasts with the expected folder structure
         in a folder named `data-processed`.
     -   a dependency management file. The exact name and syntax depend
