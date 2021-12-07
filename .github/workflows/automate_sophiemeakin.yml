@@ -14,10 +14,6 @@ jobs:
       with:
         submodules: true
 
-    - name: Enter project
-      run: |
-        cd models/$GITHUB_WORKFLOW
-    
     - uses: r-lib/actions/setup-r@v1
       with:
         use-public-rspm: true
@@ -26,8 +22,9 @@ jobs:
       run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev libv8-dev
 
     - uses: r-lib/actions/setup-renv@v1
-    
+      
     - name: Generate forecasts
+      working-directory: models/${{ github.workflow }}
       run: |
         source("main.R")
       shell: Rscript {0}
