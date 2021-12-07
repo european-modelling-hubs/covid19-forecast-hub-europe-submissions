@@ -14,9 +14,12 @@ jobs:
       with:
         submodules: true
 
-    - name: Generate forecasts
+    - name: Enter project
       run: |
         cd models/$GITHUB_WORKFLOW
+        
+    - name: Generate forecasts
+      run: |
         bash main.sh
       
     - uses: actions/upload-artifact@v2
