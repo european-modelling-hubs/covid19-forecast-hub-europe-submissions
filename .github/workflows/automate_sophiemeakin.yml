@@ -26,6 +26,7 @@ jobs:
     - name: Generate forecasts
       working-directory: models/${{ github.workflow }}
       run: |
+        renv::restore()
         source("main.R")
       shell: Rscript {0}
       
