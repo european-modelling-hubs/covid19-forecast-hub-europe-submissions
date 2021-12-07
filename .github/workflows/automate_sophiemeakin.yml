@@ -34,8 +34,8 @@ jobs:
       with:
         name: ${{ github.workflow }}
         retention-days: 5
-        path: models/${{ github.workflow }}/data/latest-forecasts
-
+        path: models/${{ github.workflow }}/data-processed/**
+        
   upload-forecasts:
     needs: generate-forecasts
     runs-on: ubuntu-20.04
