@@ -33,7 +33,7 @@ jobs:
     - uses: actions/checkout@v2
       with: 
         repository: 'epiforecasts/covid19-forecast-hub-europe'
-        token: ${{ secrets.EPIFORECASTS_TOKEN }}
+        token: ${{ secrets.FORECASTHUB_TOKEN }}
     
     - uses: actions/download-artifact@v2
       with:
@@ -43,7 +43,7 @@ jobs:
     - uses: peter-evans/create-pull-request@67df31e08a133c6a77008b89689677067fef169e
       id: cpr
       with:
-        token: ${{ secrets.EPIFORECASTS_TOKEN }}
+        token: ${{ secrets.FORECASTHUB_TOKEN }}
         commit-message: ${{ github.workflow }}'s automated submission
         committer: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
         author: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
