@@ -32,7 +32,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
       with: 
-        repository: 'epiforecasts/covid19-forecast-hub-europe'
+        repository: 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
         token: ${{ secrets.FORECASTHUB_TOKEN }}
     
     - uses: actions/download-artifact@v2
