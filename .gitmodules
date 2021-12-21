@@ -7,3 +7,6 @@
 	url = git@github.com:epiforecasts/europe-covid-forecast.git
 	branch = auto-submissions
 	ignore = dirty
+[submodule "models/UpgUmibUsi"]
+	path = models/UpgUmibUsi
+	url = git@github.com:Bisaloo/autosubmission-UpgUmibUsi.git
