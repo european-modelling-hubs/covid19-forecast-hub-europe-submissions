@@ -1,16 +1,29 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  echo = FALSE
+)
+```
 
 # Forecast Hub Autosubmission Framework
 
 <!-- badges: start -->
-
-![epinow2
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epinow2/badge.svg)
-![sophiemeakin
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/sophiemeakin/badge.svg)
-![UpgUmibUsi
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/UpgUmibUsi/badge.svg)
+```{r, results='asis'}
+list.files("models") |>
+  vapply(function(model) {
+      glue::glue("![{model} status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/{model}/badge.svg)") 
+    },
+    character(1)
+  ) |>
+  cat("\n")
+```
 <!-- badges: end -->
 
 This repo contains the necessary infrastructure to handle automatic
@@ -31,9 +44,9 @@ providing:
 
 -   The URL to a public git repository (e.g., hosted on GitHub)
     containing:
-    -   a file `main.sh`, `main.R` or `main.py` **at its root**. This
-        `main` file needs to create the forecasts with the expected
-        folder structure in a folder named `data-processed`.
+    -   a file `main.sh`, `main.R` or `main.py` **at its root**. This `main` file
+        needs to create the forecasts with the expected folder structure
+        in a folder named `data-processed`.
     -   a dependency management file. The exact name and syntax depend
         on the programming language you are using. Some examples are
         `requirements.txt` for python (with pip) or `renv.lock` for R
