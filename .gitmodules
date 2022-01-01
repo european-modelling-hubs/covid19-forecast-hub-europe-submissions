@@ -10,3 +10,6 @@
 [submodule "models/UpgUmibUsi"]
 	path = models/UpgUmibUsi
 	url = git@github.com:Bisaloo/autosubmission-UpgUmibUsi.git
+[submodule "models/weekly-growth"]
+	path = models/weekly-growth
+	url = https://github.com/seabbs/ecdc-weekly-growth-forecasts
