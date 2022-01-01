@@ -49,9 +49,8 @@ jobs:
         author: epiforecasts-bot <epiforecasts-bot@users.noreply.github.com>
         branch: ${{ github.workflow }}
         title: ${{ github.workflow }}'s automated submission
-        body: Automated submission via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
+        body: Automated submission for @seabbs via https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions
         delete-branch: true
-        reviewers: seabbs
 
     - name: Check outputs
       run: |
