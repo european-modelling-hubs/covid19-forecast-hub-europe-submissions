@@ -14,6 +14,13 @@ jobs:
       with:
         submodules: true
         
+    - uses: r-lib/actions/setup-r@v1
+      with:
+        use-public-rspm: true
+        
+    - name: Install system dependencies
+      run: sudo apt-get install libudunits2-dev libcurl4-openssl-dev libgdal-dev libv8-dev
+        
     - uses: r-lib/actions/setup-renv@v1
       
     - name: Generate forecasts
