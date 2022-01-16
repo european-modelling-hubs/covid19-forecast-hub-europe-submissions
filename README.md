@@ -11,6 +11,8 @@ status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-euro
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/sophiemeakin/badge.svg)
 ![UpgUmibUsi
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/UpgUmibUsi/badge.svg)
+![weekly-growth
+status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/weekly-growth/badge.svg)
 <!-- badges: end -->
 
 This repo contains the necessary infrastructure to handle automatic
