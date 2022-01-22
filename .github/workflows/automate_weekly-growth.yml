@@ -36,46 +36,9 @@ jobs:
         name: ${{ github.workflow }}
         retention-days: 5
         path: models/${{ github.workflow }}/data-processed/**/*
-  
-  validate-forecasts:
-    needs: generate-forecasts
-    runs-on: ubuntu-20.04
-    
-    steps:
-    - uses: actions/download-artifact@v2
-      with:
-        name: ${{ github.workflow }}
-        path: data-processed
-    
-    - uses: r-lib/actions/setup-r@v1
-      with:
-        use-public-rspm: true
-        
-    - name: Install validations package
-      run: |
-        install.packages("ForecastHubValidations", repos = "https://covid19-forecast-hub-europe.r-universe.dev")
-      shell: Rscript {0}
-      
-    - name: Run validations
-      run: |
-        download.file(
-          "https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe/raw/main/data-processed/schema-forecast.yml",
-          "schema.yml"
-        )
-        res <- lapply(
-          list.files("data-processed", recursive = TRUE, full.name = TRUE),
-          ForecastHubValidations::validate_model_forecast, "schema.yml"
-        )
-        res <- unlist(res, recursive = FALSE)
-        class(res) <- c("fhub_validations", "list")
-        print(res)
-        # ForecastHubValidations::check_for_errors(res)
-      shell: Rscript {0}
 
   upload-forecasts:
-    needs: 
-    - generate-forecasts
-    - validate-forecasts
+    needs: generate-forecasts
     runs-on: ubuntu-20.04
 
     steps:
