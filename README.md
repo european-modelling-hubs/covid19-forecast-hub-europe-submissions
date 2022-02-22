@@ -49,4 +49,5 @@ providing:
 Please note that although encouraged, it is not strictly mandatory to
 submit the code generating your forecasts. You can submit a script
 fetching already existing forecasts from another location such as an
-API, another GitHub repository, a data repository, etc.
+API, another GitHub repository, a data repository, a dropbox folder,
+etc.
