@@ -10,6 +10,8 @@
 [submodule "models/UpgUmibUsi"]
 	path = models/UpgUmibUsi
 	url = git@github.com:Bisaloo/autosubmission-UpgUmibUsi.git
+	ignore = dirty
 [submodule "models/weekly-growth"]
 	path = models/weekly-growth
 	url = git@github.com:seabbs/ecdc-weekly-growth-forecasts
+	ignore = dirty
