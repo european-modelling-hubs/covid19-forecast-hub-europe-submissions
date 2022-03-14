@@ -15,12 +15,13 @@ status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-euro
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/UpgUmibUsi/badge.svg)
 ![weekly-growth
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/weekly-growth/badge.svg)
+
 <!-- badges: end -->
 
 This repo contains the necessary infrastructure to handle automatic
 submissions to a Forecast Hub (in this specific case, the [European
 Covid-19 Forecast
-Hub](https://github.com/epiforecasts/covid19-forecast-hub-europe).
+Hub](https://github.com/epiforecasts/covid19-forecast-hub-europe)).
 
 Each model is stored as a git submodule (after a security scan) under
 the `models/` folder and code is run automatically on a schedule via
