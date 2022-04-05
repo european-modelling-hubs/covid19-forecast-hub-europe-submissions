@@ -2,7 +2,7 @@ name: "ULZF"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "5 13 * * 1"
+    - cron: "59 23 * * 1"
 
 jobs:
   generate-forecasts:
