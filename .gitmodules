@@ -19,3 +19,6 @@
 	path = models/EuroCOVIDhub-baseline
 	url = git@github.com:covid19-forecast-hub-europe/covid19-forecast-hub-europe-baseline.git
 	ignore = dirty
+[submodule "models/ULZF"]
+	path = models/ULZF
+	url = git@github.com:covid19-forecast-hub-europe/autosubmission-ULZF.git
