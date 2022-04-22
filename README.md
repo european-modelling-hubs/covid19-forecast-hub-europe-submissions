@@ -11,6 +11,8 @@ status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-euro
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/EuroCOVIDhub-baseline/badge.svg)
 ![sophiemeakin
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/sophiemeakin/badge.svg)
+![ULZF
+status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/ULZF/badge.svg)
 ![UpgUmibUsi
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/UpgUmibUsi/badge.svg)
 ![weekly-growth
