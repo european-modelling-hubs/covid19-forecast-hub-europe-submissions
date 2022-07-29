@@ -22,3 +22,6 @@
 [submodule "models/ULZF"]
 	path = models/ULZF
 	url = git@github.com:covid19-forecast-hub-europe/autosubmission-ULZF.git
+[submodule "models/CovidMetrics-epiBATS"]
+	path = models/CovidMetrics-epiBATS
+	url = git@github.com:arodloff/autosubmission-CovidMetrics-epiBATS.git
