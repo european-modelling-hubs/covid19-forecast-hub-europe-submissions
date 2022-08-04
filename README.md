@@ -5,6 +5,8 @@
 
 <!-- badges: start -->
 
+![CovidMetrics-epiBATS
+status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/CovidMetrics-epiBATS/badge.svg)
 ![epinow2
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epinow2/badge.svg)
 ![EuroCOVIDhub-baseline
