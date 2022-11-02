@@ -37,6 +37,23 @@ Each model is stored as a git submodule (after a security scan) under the
 The generated forecasts are then submitted to the hub repository as a pull
 request.
 
+```{r, message = FALSE}
+nb_merged <- gh::gh(
+  "/repos/{owner}/{repo}/pulls", 
+  owner = "covid19-forecast-hub-europe", 
+  repo = "covid19-forecast-hub-europe", 
+  state = "closed", 
+  .limit = Inf,
+  .progress = FALSE
+) |> 
+  purrr::keep(~ .x$user$login == "epiforecasts-bot") |> 
+  purrr::keep(~ !is.null(.x$merged_at)) |> 
+  length()
+```
+
+As of `r Sys.Date()`, `r nb_merged` automated submissions have successfully been
+merged.
+
 ## Guidelines for submitting your model
 
 To submit your model for auto-submission, you need to [open an
