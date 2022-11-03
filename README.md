@@ -32,7 +32,7 @@ the `models/` folder and code is run automatically on a schedule via
 GitHub Actions. The generated forecasts are then submitted to the hub
 repository as a pull request.
 
-As of 2022-11-02, 233 automated submissions have successfully been
+As of 2022-11-03, 233 automated submissions have successfully been
 merged.
 
 ## Guidelines for submitting your model
@@ -41,20 +41,19 @@ To submit your model for auto-submission, you need to [open an
 issue](https://github.com/epiforecasts/covid19-forecast-hub-europe-submissions/issues/new?template=new-model.md)
 providing:
 
--   The URL to a public git repository (e.g., hosted on GitHub)
-    containing:
-    -   a file `main.sh`, `main.R` or `main.py` **at its root**. This
-        `main` file needs to create the forecasts with the expected
-        folder structure in a folder named `data-processed`.
-    -   a dependency management file. The exact name and syntax depend
-        on the programming language you are using. Some examples are
-        `requirements.txt` for python (with pip) or `renv.lock` for R
-        (with renv). **All dependencies must have an exact version
-        pinned to minimise risk of breakage with future dependency
-        updates.**
--   the week day and time at which the workflow should run (as UTC).
--   the name of the GitHub user who should be tagged on pull request to
-    review automated submissions.
+- The URL to a public git repository (e.g., hosted on GitHub)
+  containing:
+  - a file `main.sh`, `main.R` or `main.py` **at its root**. This `main`
+    file needs to create the forecasts with the expected folder
+    structure in a folder named `data-processed`.
+  - a dependency management file. The exact name and syntax depend on
+    the programming language you are using. Some examples are
+    `requirements.txt` for python (with pip) or `renv.lock` for R (with
+    renv). **All dependencies must have an exact version pinned to
+    minimise risk of breakage with future dependency updates.**
+- the week day and time at which the workflow should run (as UTC).
+- the name of the GitHub user who should be tagged on pull request to
+  review automated submissions.
 
 Please note that although encouraged, it is not strictly mandatory to
 submit the code generating your forecasts. You can submit a script
