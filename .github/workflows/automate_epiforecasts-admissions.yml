@@ -1,4 +1,4 @@
-name: "sophiemeakin"
+name: "epiforecasts-admissions"
 on:
   workflow_dispatch:
   schedule:
