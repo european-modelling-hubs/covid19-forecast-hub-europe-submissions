@@ -21,6 +21,6 @@
 [submodule "models/CovidMetrics-epiBATS"]
 	path = models/CovidMetrics-epiBATS
 	url = git@github.com:arodloff/autosubmission-CovidMetrics-epiBATS.git
-[submodule "models/ecdc-covid19-admissions"]
-	path = models/ecdc-covid19-admissions
+[submodule "models/epiforecasts-admissions"]
+	path = models/epiforecasts-admissions
 	url = https://github.com/epiforecasts/ecdc-covid19-admissions
