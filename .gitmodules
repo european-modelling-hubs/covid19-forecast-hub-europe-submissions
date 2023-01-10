@@ -1,7 +1,3 @@
-[submodule "models/sophiemeakin"]
-	path = models/sophiemeakin
-	url = git@github.com:sophiemeakin/ecdc-covid19-admissions.git
-	ignore = dirty
 [submodule "models/epinow2"]
 	path = models/epinow2
 	url = git@github.com:epiforecasts/europe-covid-forecast.git
@@ -25,3 +21,6 @@
 [submodule "models/CovidMetrics-epiBATS"]
 	path = models/CovidMetrics-epiBATS
 	url = git@github.com:arodloff/autosubmission-CovidMetrics-epiBATS.git
+[submodule "models/ecdc-covid19-admissions"]
+	path = models/ecdc-covid19-admissions
+	url = https://github.com/epiforecasts/ecdc-covid19-admissions
