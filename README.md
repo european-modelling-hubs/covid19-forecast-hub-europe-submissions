@@ -7,12 +7,12 @@
 
 ![CovidMetrics-epiBATS
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/CovidMetrics-epiBATS/badge.svg)
+![epiforecasts-admissions
+status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epiforecasts-admissions/badge.svg)
 ![epinow2
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epinow2/badge.svg)
 ![EuroCOVIDhub-baseline
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/EuroCOVIDhub-baseline/badge.svg)
-![sophiemeakin
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/sophiemeakin/badge.svg)
 ![ULZF
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/ULZF/badge.svg)
 ![UpgUmibUsi
@@ -32,7 +32,7 @@ the `models/` folder and code is run automatically on a schedule via
 GitHub Actions. The generated forecasts are then submitted to the hub
 repository as a pull request.
 
-As of 2023-01-03, 265 automated submissions have successfully been
+As of 2023-02-03, 294 automated submissions have successfully been
 merged.
 
 ## Guidelines for submitting your model
@@ -60,3 +60,19 @@ submit the code generating your forecasts. You can submit a script
 fetching already existing forecasts from another location such as an
 API, another GitHub repository, a data repository, a dropbox folder,
 etc.
+
+------------------------------------------------------------------------
+
+### Developer guidelines
+
+Update submodules with
+
+    git submodule foreach git pull
+
+Add a new submodule with
+
+    git submodule add <repo_url> models/repo_name
+
+Remove a submodule with
+
+\`\`\` git submodule deinit models/repo_name git rm models/repo_name
