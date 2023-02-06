@@ -10,7 +10,7 @@ jobs:
     env:
       GITHUB_PAT: ${{ secrets.GITHUB_TOKEN }}
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with:
         submodules: true
         
@@ -19,7 +19,7 @@ jobs:
       run: |
         bash main.sh
       
-    - uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v3
       with:
         name: ${{ github.workflow }}
         retention-days: 5
@@ -30,12 +30,12 @@ jobs:
     runs-on: ubuntu-20.04
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
       with: 
         repository: 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
         token: ${{ secrets.FORECASTHUB_TOKEN }}
     
-    - uses: actions/download-artifact@v2
+    - uses: actions/download-artifact@v3
       with:
         name: ${{ github.workflow }}
         path: data-processed
