@@ -9,8 +9,7 @@
 	ignore = dirty
 [submodule "models/weekly-growth"]
 	path = models/weekly-growth
-	url = git@github.com:sbfnk/ecdc-weekly-growth-forecasts
-        branch = update-data
+	url = git@github.com:seabbs/ecdc-weekly-growth-forecasts
 	ignore = dirty
 [submodule "models/EuroCOVIDhub-baseline"]
 	path = models/EuroCOVIDhub-baseline
