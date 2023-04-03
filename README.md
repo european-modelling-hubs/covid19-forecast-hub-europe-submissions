@@ -7,8 +7,8 @@
 
 ![CovidMetrics-epiBATS
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/CovidMetrics-epiBATS/badge.svg)
-![epiforecasts-admissions
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epiforecasts-admissions/badge.svg)
+![epiforecasts-timeseries
+status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epiforecasts-timeseries/badge.svg)
 ![epinow2
 status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epinow2/badge.svg)
 ![EuroCOVIDhub-baseline
@@ -32,7 +32,7 @@ the `models/` folder and code is run automatically on a schedule via
 GitHub Actions. The generated forecasts are then submitted to the hub
 repository as a pull request.
 
-As of 2023-03-03, 320 automated submissions have successfully been
+As of 2023-04-03, 343 automated submissions have successfully been
 merged.
 
 ## Guidelines for submitting your model
