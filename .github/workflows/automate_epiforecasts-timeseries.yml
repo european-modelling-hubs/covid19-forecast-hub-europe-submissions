@@ -2,7 +2,7 @@ name: "epiforecasts-timeseries"
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 13 * * 2"
+    - cron: "0 13 * * 1"
 
 jobs:
   generate-forecasts:
