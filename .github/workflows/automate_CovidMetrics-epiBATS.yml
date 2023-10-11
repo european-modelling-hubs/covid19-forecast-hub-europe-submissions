@@ -43,7 +43,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
       with: 
-        repository: 'covid19-forecast-hub-europe/covid19-forecast-hub-europe'
+        repository: 'european-modelling-hubs/covid19-forecast-hub-europe'
         token: ${{ secrets.FORECASTHUB_TOKEN }}
     
     - uses: actions/download-artifact@v3
