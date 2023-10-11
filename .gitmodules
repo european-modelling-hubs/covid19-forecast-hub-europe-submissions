@@ -13,7 +13,7 @@
 	ignore = dirty
 [submodule "models/EuroCOVIDhub-baseline"]
 	path = models/EuroCOVIDhub-baseline
-	url = git@github.com:covid19-forecast-hub-europe/covid19-forecast-hub-europe-baseline.git
+	url = git@github.com:european-modelling-hubs/covid19-forecast-hub-europe-baseline.git
 	ignore = dirty
 [submodule "models/ULZF"]
 	path = models/ULZF
