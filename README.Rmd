@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 ```{r, results='asis'}
 list.files("models") |>
   vapply(function(model) {
-      glue::glue("![{model} status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/{model}/badge.svg)") 
+      glue::glue("![{model} status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/{model}/badge.svg)") 
     },
     character(1)
   ) |>
