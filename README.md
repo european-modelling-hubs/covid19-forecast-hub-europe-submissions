@@ -6,17 +6,17 @@
 <!-- badges: start -->
 
 ![epiforecasts-timeseries
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epiforecasts-timeseries/badge.svg)
+status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/epiforecasts-timeseries/badge.svg)
 ![epinow2
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/epinow2/badge.svg)
+status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/epinow2/badge.svg)
 ![EuroCOVIDhub-baseline
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/EuroCOVIDhub-baseline/badge.svg)
+status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/EuroCOVIDhub-baseline/badge.svg)
 ![ULZF
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/ULZF/badge.svg)
+status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/ULZF/badge.svg)
 ![UpgUmibUsi
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/UpgUmibUsi/badge.svg)
+status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/UpgUmibUsi/badge.svg)
 ![weekly-growth
-status](https://github.com/covid19-forecast-hub-europe/covid19-forecast-hub-europe-submissions/workflows/weekly-growth/badge.svg)
+status](https://github.com/european-modelling-hubs/covid19-forecast-hub-europe-submissions/workflows/weekly-growth/badge.svg)
 
 <!-- badges: end -->
 
@@ -30,7 +30,7 @@ the `models/` folder and code is run automatically on a schedule via
 GitHub Actions. The generated forecasts are then submitted to the hub
 repository as a pull request.
 
-As of 2023-10-03, 460 automated submissions have successfully been
+As of 2023-11-03, 478 automated submissions have successfully been
 merged.
 
 ## Guidelines for submitting your model
