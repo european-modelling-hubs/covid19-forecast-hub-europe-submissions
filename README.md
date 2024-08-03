@@ -30,7 +30,7 @@ the `models/` folder and code is run automatically on a schedule via
 GitHub Actions. The generated forecasts are then submitted to the hub
 repository as a pull request.
 
-As of 2024-07-03, 560 automated submissions have successfully been
+As of 2024-08-03, 568 automated submissions have successfully been
 merged.
 
 ## Guidelines for submitting your model
