@@ -43,7 +43,7 @@ jobs:
         repository: 'european-modelling-hubs/covid19-forecast-hub-europe'
         token: ${{ secrets.FORECASTHUB_TOKEN }}
     
-    - uses: actions/download-artifact@v3
+    - uses: actions/download-artifact@v4.1.7
       with:
         name: ${{ github.workflow }}
         path: data-processed
